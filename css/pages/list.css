@@ -9,7 +9,6 @@
 .page-list .meta-container {
     padding-right: 2rem;
 }
-
 .page-list .list {
     table-layout: auto;
 }
@@ -45,32 +44,48 @@
     color: var(--color-on-primary);
 }
 .page-list .level-container .level {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto auto 1fr;
+    gap: 1rem 2rem;
     padding-right: 2rem;
-    max-width: 48rem;
+    max-width: 56rem;
+}
+.page-list .level-container .level h1 {
+    grid-column: 1 / -1;
 }
 .page-list .level-container .level .level-authors {
+    grid-column: 1 / -1;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-auto-rows: max-content;
     gap: 1rem;
 }
 .page-list .level-container .level .video {
+    grid-column: 1;
+    width: 100%;
+    max-width: 28rem;
     aspect-ratio: 16/9;
 }
 .page-list .level-container .level .stats {
+    grid-column: 2;
+    grid-row: 3;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
     text-align: center;
-    gap: 2rem;
 }
 .page-list .level-container .level .stats li {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+.page-list .level-container .level h2,
+.page-list .level-container .level > p,
+.page-list .level-container .level .records {
+    grid-column: 1 / -1;
 }
 .page-list .level-container .level .records {
     table-layout: fixed;

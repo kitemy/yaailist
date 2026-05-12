@@ -1,15 +1,38 @@
-function score(rank, percent, minPercent) {
-    if (rank > 150) return 0;
-    if (rank > 75 && percent < 100) return 0;
+const scale = 0;
 
-    let score = (-25 * Math.pow(rank - 1, 0.4) + 200) *
+export function score(rank, percent, minPercent) {
+    if (rank > 150) {
+        return 0;
+    }
+    if (rank > 75 && percent < 100) {
+        return 0;
+    }
+
+    let score = (-25*Math.pow(rank-1, 0.4) + 200) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
 
     score = Math.max(0, score);
 
-    if (percent !== 100) {
-        score = score - score / 3;
+    if (percent != 100) {
+        return round(score - score / 3);
     }
 
-    return Math.max(Math.round(score), 0);
+    return Math.max(round(score), 0);
+}
+
+export function round(num) {
+    if (!('' + num).includes('e')) {
+        return +(Math.round(num + 'e+' + scale) + 'e-' + scale);
+    } else {
+        var arr = ('' + num).split('e');
+        var sig = '';
+        if (+arr[1] + scale > 0) {
+            sig = '+';
+        }
+        return +(
+            Math.round(+arr[0] + 'e' + sig + (+arr[1] + scale)) +
+            'e-' +
+            scale
+        );
+    }
 }

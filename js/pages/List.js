@@ -95,6 +95,8 @@ export default {
                             </li>
                         </ol>
                     </template>
+                <div> Bienvenue sur La YAAI List !
+                    Ici, les niveaux sont classés par la difficulté d'après celles de la AREDL.
                 </div>
             </div>
         </main>

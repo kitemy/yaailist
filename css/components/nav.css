@@ -17,7 +17,8 @@
     border-color: var(--color-on-primary);
 }
 .nav .nav__actions {
-    flex: 1;
+    justify-self: end;
+    flex: unset;
     display: flex;
     align-items: center;
     justify-content: flex-end;

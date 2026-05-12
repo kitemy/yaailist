@@ -5,6 +5,7 @@
 }
 .nav .nav__tab {
     padding-top: 4px;
+    padding-bottom: 8px;
     border-bottom: 4px solid transparent;
     display: flex;
     align-items: center;

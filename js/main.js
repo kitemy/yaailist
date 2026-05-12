@@ -1,4 +1,5 @@
 import routes from './routes.js';
+import './speed-insights.js';
 
 export const store = Vue.reactive({
     dark: JSON.parse(localStorage.getItem('dark')) || false,

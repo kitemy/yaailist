@@ -1,4 +1,4 @@
-import { round, score } from './score.js';
+import { score } from './score.js';
 
 const dir = '/data';
 

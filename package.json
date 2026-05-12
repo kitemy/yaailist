@@ -1,0 +1,16 @@
+{
+  "name": "yaailist",
+  "version": "1.0.0",
+  "description": "The YAAI List - Vue 3 application",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Open index.html in browser'",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [],
+  "author": "kitemy",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}

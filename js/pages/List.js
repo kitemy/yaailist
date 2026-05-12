@@ -95,8 +95,14 @@ export default {
                             </li>
                         </ol>
                     </template>
-                <div> Bienvenue sur La YAAI List !
-                    Ici, les niveaux sont classés par la difficulté d'après celles de la AREDL.
+                <h3>Overview</h3>
+                    <p>
+                        Bienvenue sur La YAAI List !
+                    </p>
+                    <p>
+                        Les niveaux sont placés en fonction de la difficulté sur la AREDL 
+                        (a community based project ranking every rated Extreme Demon in Geometry Dash as accurately as possible).
+                    </p>
                 </div>
             </div>
         </main>

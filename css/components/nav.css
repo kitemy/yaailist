@@ -1,6 +1,7 @@
 .nav {
     display: flex;
     column-gap: 2rem;
+    align-items: center;
 }
 .nav .nav__tab {
     padding-top: 4px;
@@ -17,8 +18,8 @@
     border-color: var(--color-on-primary);
 }
 .nav .nav__actions {
-    justify-self: end;
-    flex: unset;
+    position: absolute;
+    right: 2rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;

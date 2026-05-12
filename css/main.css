@@ -47,6 +47,7 @@ main {
 }
 
 header {
+    position: relative;
     display: flex;
     padding-inline: calc(25vw - 10rem);
     height: 4rem;

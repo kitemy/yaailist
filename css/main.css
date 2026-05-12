@@ -59,10 +59,11 @@ header {
         display: grid;
         padding-inline: 0;
         grid-template-columns: 1fr auto 1fr;
+        padding-inline: 2rem;
     }
 }
 header .logo {
-    justify-self: end;
+    justify-self: start;
     align-self: center;
     display: flex;
     align-items: flex-end;

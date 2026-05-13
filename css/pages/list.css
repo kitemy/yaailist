@@ -43,17 +43,19 @@
     background-color: var(--color-primary);
     color: var(--color-on-primary);
 }
+.page-list .level-container {
+    overflow-y: auto;
+}
 .page-list .level-container .level {
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 1.5rem 2.5rem;
+    grid-template-columns: 1fr minmax(10rem, 13rem);
+    gap: 1.25rem 2rem;
     padding-right: 2rem;
-    max-width: 60rem;
 }
 .page-list .level-container .level h1 {
     grid-column: 1 / -1;
-    font-size: 2.5rem;
-    margin-bottom: 0;
+    font-size: 2.2rem;
+    margin: 0;
     line-height: 1.1;
 }
 .page-list .level-container .level .level-authors {
@@ -61,15 +63,14 @@
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-auto-rows: max-content;
-    gap: 0.75rem 1rem;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem 1rem;
 }
 .page-list .level-container .level .video {
     grid-column: 1;
     grid-row: 3;
     width: 100%;
-    max-width: 30rem;
     aspect-ratio: 16/9;
+    border-radius: 0.5rem;
 }
 .page-list .level-container .level .stats {
     grid-column: 2;
@@ -78,10 +79,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    text-align: center;
-    min-width: 10rem;
-    padding: 0;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
     list-style: none;
     margin: 0;
 }
@@ -89,33 +90,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
     list-style: none;
 }
 .page-list .level-container .level .stats li .type-title-sm {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    opacity: 0.7;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    opacity: 0.5;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .page-list .level-container .level .stats li p {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.75rem;
+    font-weight: 700;
     margin: 0;
+    line-height: 1;
 }
 .page-list .level-container .level h2 {
     grid-column: 1 / -1;
-    font-size: 1.75rem;
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    margin: 0;
 }
 .page-list .level-container .level > p {
     grid-column: 1 / -1;
-    margin-top: 0;
+    margin: 0;
+    display: none;
 }
 .page-list .level-container .level .records {
     grid-column: 1 / -1;
     table-layout: fixed;
     width: 100%;
+    border-collapse: collapse;
+}
+.page-list .level-container .level .records tr {
+    border-bottom: 1px solid rgba(128,128,128,0.15);
 }
 .page-list .level-container .level .records tr td:not(:last-child) {
     padding-right: 1rem;
@@ -125,29 +133,46 @@
     padding-block: 0.75rem;
 }
 .page-list .level-container .level .records .user .type-label-lg {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 600;
+}
+.page-list .level-container .level .records .mobile {
+    width: 2rem;
+    text-align: center;
+}
+.page-list .level-container .level .records .mobile img {
+    height: 1.1rem;
+    vertical-align: middle;
 }
 .page-list .level-container .level .records .yt-btn {
     text-align: end;
     padding-block: 0.75rem;
     white-space: nowrap;
+    width: 7rem;
 }
 .page-list .level-container .level .records .yt-btn a {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.35rem;
     background-color: #ff0000;
     color: white;
-    padding: 0.3rem 0.75rem;
-    border-radius: 0.4rem;
-    font-size: 0.85rem;
-    font-weight: 600;
+    padding: 0.35rem 0.9rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-decoration: none;
-    transition: background-color 100ms ease;
+    letter-spacing: 0.03em;
+    transition: opacity 100ms ease, transform 100ms ease;
 }
 .page-list .level-container .level .records .yt-btn a:hover {
-    background-color: #cc0000;
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+.page-list .level-container .level .records .yt-btn a svg {
+    width: 1rem;
+    height: 1rem;
+    fill: white;
+    flex-shrink: 0;
 }
 .page-list .meta-container .og a:hover {
     text-decoration: underline;

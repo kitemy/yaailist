@@ -52,9 +52,6 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
-                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
-                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
-                    <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
                             <td class="user">
@@ -65,7 +62,8 @@ export default {
                             </td>
                             <td class="yt-btn">
                                 <a :href="record.link" target="_blank">
-                                    ▶ YouTube
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+                                    Watch
                                 </a>
                             </td>
                         </tr>
@@ -95,7 +93,7 @@ export default {
                         Bienvenue sur La YAAI List !
                     </p>
                     <p>
-                        Les niveaux sont placés en fonction de la difficulté sur la AREDL 
+                        Les niveaux sont placés en fonction de la difficulté sur la AREDL
                         (a community based project ranking every rated Extreme Demon in Geometry Dash as accurately as possible).
                     </p>
                 </div>

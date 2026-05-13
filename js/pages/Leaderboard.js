@@ -13,6 +13,11 @@ export default {
         selected: 0,
         err: [],
     }),
+    methods: {
+        localize(n) {
+            return localize(n);
+        },
+    },
     template: `
         <main v-if="loading">
             <Spinner></Spinner>

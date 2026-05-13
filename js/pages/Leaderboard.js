@@ -130,12 +130,15 @@ export default {
     },
     async mounted() {
         const [leaderboard, err] = await fetchLeaderboard();
-
         this.leaderboard = Array.isArray(leaderboard) ? leaderboard : [];
         this.err = err || [];
         this.loading = false;
+
+        const targetUser = this.$route.query.user;
+        if (targetUser) {
+            const idx = this.leaderboard.findIndex(
+                e => e.user.toLowerCase() === targetUser.toLowerCase()
+            );
+            if (idx !== -1) this.selected = idx;
+        }
     },
-    methods: {
-        localize,
-    },
-};

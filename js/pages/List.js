@@ -55,7 +55,7 @@ export default {
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
                             <td class="user">
-                                <span class="type-label-lg">{{ record.user }}</span>
+                                <router-link class="type-label-lg" :to="{ path: '/leaderboard', query: { user: record.user } }">{{ record.user }}</router-link>
                             </td>
                             <td class="mobile">
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">

@@ -79,8 +79,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem;
     background-color: var(--color-background-hover);
     border-radius: 0.75rem;
     list-style: none;
@@ -90,7 +90,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.4rem;
     list-style: none;
 }
 .page-list .level-container .level .stats li .type-title-sm {
@@ -101,7 +101,7 @@
     font-weight: 600;
 }
 .page-list .level-container .level .stats li p {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     font-weight: 700;
     margin: 0;
     line-height: 1;

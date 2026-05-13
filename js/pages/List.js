@@ -4,6 +4,7 @@ import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
+import LevelAuthors from "../components/List/LevelAuthors.js";
 
 const roleIconMap = {
     owner: "crown",
@@ -14,7 +15,7 @@ const roleIconMap = {
 };
 
 export default {
-    components: { Spinner },
+    components: { Spinner, LevelAuthors },
     template: `
         <main v-if="loading">
             <Spinner></Spinner>
@@ -41,12 +42,15 @@ export default {
                     <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
                     <ul class="stats">
                         <li>
+                            <div class="type-title-sm">Publisher</div>
+                                <LevelAuthors :author="level.author"></LevelAuthors>
+                        <li>
                             <div class="type-title-sm">Points</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                                <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
+                                <p>{{ level.id }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>

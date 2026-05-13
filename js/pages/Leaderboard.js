@@ -142,3 +142,4 @@ export default {
             if (idx !== -1) this.selected = idx;
         }
     },
+}

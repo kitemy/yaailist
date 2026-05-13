@@ -4,11 +4,13 @@ const dir = '/data';
 
 export async function fetchList() {
     const listResult = await fetch(`${dir}/_list.json`);
+    if (!listResult.ok) throw new Error(`HTTP ${listResult.status}`);
     try {
         const list = await listResult.json();
         return await Promise.all(
             list.map(async (path, rank) => {
                 const levelResult = await fetch(`${dir}/${path}.json`);
+                if (!levelResult.ok) throw new Error(`HTTP ${levelResult.status}`);
                 try {
                     const level = await levelResult.json();
                     return [
@@ -45,23 +47,32 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    if (!list) return [[], ['Failed to load list']];
 
     const scoreMap = {};
     const errs = [];
+
     list.forEach(([level, err], rank) => {
         if (err) {
             errs.push(err);
             return;
         }
 
+        if (!level.verifier) {
+            console.warn(`Level ${level.name} has no verifier, skipping.`);
+            return;
+        }
+
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
         ) || level.verifier;
+
         scoreMap[verifier] ??= {
             verified: [],
             completed: [],
             progressed: [],
         };
+
         const { verified } = scoreMap[verifier];
         verified.push({
             rank: rank + 1,
@@ -71,15 +82,23 @@ export async function fetchLeaderboard() {
         });
 
         level.records.forEach((record) => {
+            if (!record.user) {
+                console.warn(`Record in ${level.name} has no user, skipping.`);
+                return;
+            }
+
             const user = Object.keys(scoreMap).find(
                 (u) => u.toLowerCase() === record.user.toLowerCase(),
             ) || record.user;
+
             scoreMap[user] ??= {
                 verified: [],
                 completed: [],
                 progressed: [],
             };
+
             const { completed, progressed } = scoreMap[user];
+
             if (record.percent === 100) {
                 completed.push({
                     rank: rank + 1,
@@ -105,7 +124,6 @@ export async function fetchLeaderboard() {
         const total = [verified, completed, progressed]
             .flat()
             .reduce((prev, cur) => prev + cur.score, 0);
-
         return {
             user,
             total: Math.round(total),

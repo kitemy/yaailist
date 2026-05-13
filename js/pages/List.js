@@ -52,19 +52,21 @@ export default {
                         </li>
                     </ul>
                     <h2>Records</h2>
+                    <p v-if="selected + 1 <= 75"><strong>{{ level.percentToQualify }}%</strong> or better to qualify</p>
+                    <p v-else-if="selected + 1 <= 150"><strong>100%</strong> or better to qualify</p>
+                    <p v-else>This level does not accept new records.</p>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
-                            <td class="percent">
-                                <p>{{ record.percent }}%</p>
-                            </td>
                             <td class="user">
-                                <a :href="record.link" target="_blank" class="type-label-lg">{{ record.user }}</a>
+                                <span class="type-label-lg">{{ record.user }}</span>
                             </td>
                             <td class="mobile">
                                 <img v-if="record.mobile" :src="\`/assets/phone-landscape\${store.dark ? '-dark' : ''}.svg\`" alt="Mobile">
                             </td>
-                            <td class="hz">
-                                <p>{{ record.hz }}Hz</p>
+                            <td class="yt-btn">
+                                <a :href="record.link" target="_blank">
+                                    ▶ YouTube
+                                </a>
                             </td>
                         </tr>
                     </table>
@@ -88,7 +90,7 @@ export default {
                             </li>
                         </ol>
                     </template>
-                <h3>Overview</h3>
+                    <h3>Overview</h3>
                     <p>
                         Bienvenue sur La YAAI List !
                     </p>
@@ -117,7 +119,6 @@ export default {
             if (!this.level.showcase) {
                 return embed(this.level.verification);
             }
-
             return embed(
                 this.toggledShowcase
                     ? this.level.showcase
@@ -126,11 +127,9 @@ export default {
         },
     },
     async mounted() {
-        // Hide loading spinner
         this.list = await fetchList();
         this.editors = await fetchEditors();
 
-        // Error handling
         if (!this.list) {
             this.errors = [
                 "Failed to load list. Retry in a few minutes or notify list staff.",

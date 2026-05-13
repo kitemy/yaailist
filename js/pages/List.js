@@ -43,14 +43,14 @@ export default {
                     <ul class="stats">
                         <li>
                             <div class="type-title-sm">Publisher</div>
-                                <LevelAuthors :author="level.author"></LevelAuthors>
+                            <LevelAuthors :author="level.author"></LevelAuthors>
                         <li>
                             <div class="type-title-sm">Points</div>
-                                <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
                         </li>
                         <li>
                             <div class="type-title-sm">ID</div>
-                                <p>{{ level.id }}</p>
+                            <p>{{ level.id }}</p>
                         </li>
                     </ul>
                     <h2>Records</h2>

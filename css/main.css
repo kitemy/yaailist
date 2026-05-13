@@ -62,7 +62,9 @@ header .logo {
     gap: 1rem;
 }
 header .nav {
-    display: none;
+    flex: unset;
+    justify-self: center;
+    align-self: center;
 }
 main {
     height: 0;

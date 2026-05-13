@@ -62,9 +62,7 @@ header .logo {
     gap: 1rem;
 }
 header .nav {
-    flex: unset;
-    justify-self: center;
-    align-self: center;
+    display: none;
 }
 main {
     height: 0;
@@ -87,4 +85,64 @@ input[type="checkbox"] {
     width: 1.25rem;
     cursor: pointer;
     margin: 0;
+}
+
+.list-container,
+.level-container .level,
+.meta-container .meta {
+    background-color: var(--color-background-hover);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
+}
+
+.stats li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.stats li .type-title-sm {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+}
+
+.stats li p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.yt-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.yt-btn a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.yt-btn svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: white;
 }

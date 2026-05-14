@@ -55,7 +55,7 @@ export default {
                             </li>
                             <li>
                                 <div class="type-title-sm">Points</div>
-                                <p>{{ score(selected + 1, 100) }}</p>
+                                <p>{{ score(selected + 1, 100, 100) }}</p>
                             </li>
                             <li>
                                 <div class="type-title-sm">ID</div>

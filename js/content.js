@@ -3,7 +3,7 @@ import { score } from './score.js';
 const dir = '/data';
 
 export async function fetchList() {
-    const listResult = await fetch(`${dir}/_list.json`);
+    const listResult = await fetch(`${dir}/AAA-list.json`);
     if (!listResult.ok) throw new Error(`HTTP ${listResult.status}`);
     try {
         const list = await listResult.json();

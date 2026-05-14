@@ -64,11 +64,11 @@
     font-size: 2.2rem;
     margin: 0;
     line-height: 1.1;
-    align: center;
+    text-align: center;
 }
 .page-list .level-container .level .level-body {
     display: grid;
-    grid-template-columns: 1fr minmax(1rem, 6rem);
+    grid-template-columns: 1fr minmax(11rem, 11rem);
     gap: 1.25rem;
     align-items: stretch;
 }

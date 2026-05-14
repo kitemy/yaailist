@@ -63,7 +63,7 @@ export default {
                             <tr v-for="score in entry.verified">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.path } }">
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
                                         {{ score.level }}
                                     </router-link>
                                 </td>
@@ -86,7 +86,7 @@ export default {
                             <tr v-for="score in entry.completed">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.path } }">
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
                                         {{ score.level }}
                                     </router-link>
                                 </td>
@@ -109,7 +109,7 @@ export default {
                             <tr v-for="score in entry.progressed">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.path } }">
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
                                         {{ score.percent }}% {{ score.level }}
                                     </router-link>
                                 </td>

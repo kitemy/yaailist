@@ -119,8 +119,7 @@ main > div {
     scrollbar-width: none;
 }
 .nav__actions .nav__icon img {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    opacity: 1;
 }
 .nav__actions .nav__icon:hover img {
     opacity: 1;

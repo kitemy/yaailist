@@ -32,7 +32,7 @@
 }
 .page-leaderboard .board {
     table-layout: auto;
-    display: block;
+    display: table;
     width: 100%;
 }
 .page-leaderboard .board .rank {

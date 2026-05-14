@@ -1,6 +1,5 @@
 .page-leaderboard-container {
     display: block;
-    background-color: var(--color-background-hover);
 }
 .page-leaderboard {
     height: 100%;
@@ -27,6 +26,8 @@
 .page-leaderboard .player-container {
     grid-row: 2;
     padding-block: 2rem;
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
 }
 .page-leaderboard .board-container {
     padding-inline: 1rem;
@@ -37,13 +38,13 @@
     width: max-content;
 }
 .page-leaderboard .board .rank {
-    padding-block: 0.4rem;
+    padding-block: 0.75rem;
     padding-right: 1rem;
     text-align: end;
     white-space: nowrap;
 }
 .page-leaderboard .board .total {
-    padding: 0.4rem 1rem;
+    padding: 0.75rem 1rem;
     text-align: end;
     white-space: nowrap;
 }
@@ -63,7 +64,7 @@
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 600;
-    line-height: 1.4;
+    line-height: 1.8;
 }
 .page-leaderboard .board .user button:hover {
     background-color: var(--color-primary);
@@ -76,13 +77,13 @@
     opacity: 1;
 }
 .page-leaderboard .player-container {
-    background-color: transparent;
+    padding-inline: 1.5rem;
 }
 .page-leaderboard .player {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-right: 2rem;
+    padding-right: 0.5rem;
 }
 .page-leaderboard .player .table {
     table-layout: fixed;

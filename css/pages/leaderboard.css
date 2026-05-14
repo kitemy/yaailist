@@ -104,6 +104,12 @@
 .page-leaderboard .player .table .level {
     width: 100%;
 }
+.page-leaderboard .player .table .level a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
 .page-leaderboard .player .table a:hover {
     text-decoration: underline;
 }

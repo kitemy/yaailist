@@ -48,6 +48,7 @@
 }
 .page-leaderboard .board .user button {
     background-color: var(--color-background-hover);
+    width: 100%;
     color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;
@@ -73,6 +74,11 @@
     flex-direction: column;
     gap: 2rem;
     padding-right: 2rem;
+}
+.page-leaderboard .player-container {
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
+    align-self: stretch;
 }
 .page-leaderboard .player .table {
     table-layout: fixed;

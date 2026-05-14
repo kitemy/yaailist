@@ -30,52 +30,49 @@ body {
     flex-direction: column;
     margin: 0;
 }
-header,
-main {
-    background-color: var(--color-background);
-    color: var(--color-on-background);
-    display: grid;
-    grid-template-columns: minmax(14rem, 1fr) minmax(20rem, 3fr) minmax(14rem, 1fr);
-    column-gap: 2rem;
-}
 header {
-    position: relative;
-    display: flex;
-    padding-inline: calc(25vw - 10rem);
-    height: 4rem;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+    display: flex;
     align-items: center;
-}
-@media screen and (min-width: 1366px) {
-    header {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        padding-inline: 2rem;
-    }
+    justify-content: space-between;
+    padding-inline: 2rem;
+    height: 4rem;
+    flex-shrink: 0;
 }
 header .logo {
-    justify-self: start;
-    align-self: center;
     display: flex;
     align-items: flex-end;
     gap: 1rem;
 }
-header .nav {
-    display: none;
-    flex: unset;
-    justify-self: center;
-    align-self: center;
+header .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 main {
-    height: 0;
+    background-color: var(--color-background);
+    color: var(--color-on-background);
     flex: 1;
+    height: 0;
     display: grid;
+    grid-template-columns: minmax(14rem, 1fr) minmax(20rem, 3fr) minmax(14rem, 1fr);
     grid-template-rows: minmax(0, 1fr);
     column-gap: 2rem;
 }
 main > div {
     overflow-y: auto;
+}
+/* Make all three panels the same height with subtle background */
+.page-list .list-container,
+.page-list .meta-container {
+    background-color: var(--color-background-hover);
+    border-radius: 1rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    overflow-y: auto;
+}
+.page-list .meta-container {
+    margin: 1.5rem 1.5rem 1.5rem 0;
 }
 .spinner {
     display: flex;
@@ -88,64 +85,4 @@ input[type="checkbox"] {
     width: 1.25rem;
     cursor: pointer;
     margin: 0;
-}
-
-.list-container,
-.level-container .level,
-.meta-container .meta {
-    background-color: var(--color-background-hover);
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem 0;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 1rem 1.25rem;
-    margin: 1rem 0;
-    background-color: var(--color-background-hover);
-    border-radius: 0.75rem;
-}
-
-.stats li {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-}
-
-.stats li .type-title-sm {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    opacity: 0.6;
-}
-
-.stats li p {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.yt-btn a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: background-color 0.2s;
-}
-
-.yt-btn a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.yt-btn svg {
-    width: 1.4rem;
-    height: 1.4rem;
-    fill: white;
 }

@@ -42,8 +42,9 @@
     text-decoration: line-through;
 }
 .page-list .list .level button:hover {
-    background-color: var(--color-background-hover);
-    color: var(--color-on-background-hover);
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    opacity: 0.7;
 }
 .page-list .list .level.active button {
     background-color: var(--color-primary);

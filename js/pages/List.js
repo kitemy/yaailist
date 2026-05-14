@@ -21,14 +21,22 @@ export default {
         </main>
         <main v-else class="page-list">
             <div class="list-container">
+                <div class="search-container">
+                    <input
+                        type="text"
+                        v-model="search"
+                        placeholder="Search levels..."
+                        class="search-bar"
+                    />
+                </div>
                 <table class="list" v-if="list">
-                    <tr v-for="([level, err], i) in list">
+                    <tr v-for="([level, err], i) in filteredList">
                         <td class="rank">
-                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ i + 1 }}</p>
+                            <p v-if="i + 1 <= 150" class="type-label-lg">#{{ level ? list.indexOf(list.find(([l]) => l === level)) + 1 : '?' }}</p>
                             <p v-else class="type-label-lg">Legacy</p>
                         </td>
-                        <td class="level" :class="{ 'active': selected == i, 'error': !level }">
-                            <button @click="selected = i">
+                        <td class="level" :class="{ 'active': selected == list.indexOf(list.find(([l]) => l === level)), 'error': !level }">
+                            <button @click="selected = list.indexOf(list.find(([l]) => l === level))">
                                 <span class="type-label-lg">{{ level?.name || \`Error (\${err}.json)\` }}</span>
                             </button>
                         </td>
@@ -107,12 +115,20 @@ export default {
         loading: true,
         selected: 0,
         errors: [],
+        search: '',
         roleIconMap,
         store
     }),
     computed: {
+        filteredList() {
+            if (!this.search.trim()) return this.list;
+            const q = this.search.trim().toLowerCase();
+            return this.list.filter(([level]) =>
+                level?.name?.toLowerCase().includes(q)
+            );
+        },
         level() {
-            return this.list[this.selected][0];
+            return this.list[this.selected]?.[0];
         },
         video() {
             if (!this.level.showcase) {

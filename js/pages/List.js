@@ -128,7 +128,9 @@ export default {
             );
         },
         level() {
-            return this.list[this.selected]?.[0];
+            const entry = this.list[this.selected];
+            if (!entry) return null;
+            return entry[0];
         },
         video() {
             if (!this.level) return '';

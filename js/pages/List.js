@@ -55,7 +55,7 @@ export default {
                             </li>
                             <li>
                                 <div class="type-title-sm">Points</div>
-                                <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                                <p>{{ score(selected + 1, 100) }}</p>
                             </li>
                             <li>
                                 <div class="type-title-sm">ID</div>
@@ -132,14 +132,7 @@ export default {
         },
         video() {
             if (!this.level) return '';
-            if (!this.level.showcase) {
-                return embed(this.level.verification);
-            }
-            return embed(
-                this.toggledShowcase
-                    ? this.level.showcase
-                    : this.level.verification
-            );
+            return embed(this.level.verification);
         },
     },
     watch: {

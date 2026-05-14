@@ -93,7 +93,6 @@ input[type="checkbox"] {
     gap: 0.5rem;
     margin-left: auto;
 }
-
 .nav__icon {
     display: flex;
     align-items: center;
@@ -106,12 +105,23 @@ input[type="checkbox"] {
     opacity: 0.85;
     transition: opacity 100ms ease;
 }
-
 .nav__icon:hover {
     opacity: 1;
 }
-
 .nav__icon img {
     width: 1.5rem;
     height: 1.5rem;
+}
+main > div::-webkit-scrollbar {
+    display: none;
+}
+main > div {
+    scrollbar-width: none;
+}
+.nav__actions .nav__icon img {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+.nav__actions .nav__icon:hover img {
+    opacity: 1;
 }

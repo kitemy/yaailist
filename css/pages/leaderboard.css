@@ -47,7 +47,7 @@
     width: 100%;
 }
 .page-leaderboard .board .user button {
-    background-color: var(--color-background);
+    background-color: var(--color-background-hover);
     color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;
@@ -67,6 +67,9 @@
 }
 .page-leaderboard .player {
     display: flex;
+    background-color: var(--color-background-hover);
+    border-radius: 0.75rem;
+    padding: 1.25rem 1rem;
     flex-direction: column;
     gap: 2rem;
     padding-right: 2rem;

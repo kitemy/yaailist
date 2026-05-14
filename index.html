@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=1024" />
         <title>The YAAI List</title>
-
         <link rel="icon" href="/yaai.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,29 +19,20 @@
         <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
         <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
         <script type="module" src="/js/main.js"></script>
-        
     </head>
     <body id="app">
         <header :class="{ dark: store.dark }">
             <div class="logo">
                 <h2>The YAAI List</h2>
             </div>
-            <nav class="nav">
-                <router-link class="nav__tab" to="/">
-                    <span class="type-label-lg">List</span>
-                </router-link>
-                <router-link class="nav__tab" to="/leaderboard">
-                    <span class="type-label-lg">Leaderboard</span>
-                </router-link>
-                <div class="nav__actions">
-                    <button class="nav__icon" @click.prevent="store.toggleDark()">
-                        <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt=""/>
-                    </button>
-                    <a class="nav__icon" href="https://discord.gg/JyhFVKv97W">
-                        <img src="/assets/discord.svg" alt="Discord Logo" />
-                    </a>
-                </div>
-            </nav>
+            <div class="header-actions">
+                <button class="nav__icon" @click.prevent="store.toggleDark()">
+                    <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt=""/>
+                </button>
+                <a class="nav__icon" href="https://discord.gg/JyhFVKv97W">
+                    <img src="/assets/discord.svg" alt="Discord Logo" />
+                </a>
+            </div>
         </header>
         <router-view :class="{ dark: store.dark }"></router-view>
     </body>

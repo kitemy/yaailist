@@ -7,8 +7,7 @@
     padding-inline: 1rem;
 }
 .page-list .meta-container {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 2rem;
 }
 .page-list .list {
     table-layout: auto;

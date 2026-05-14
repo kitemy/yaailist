@@ -144,11 +144,6 @@ export default {
     },
     watch: {
         '$route.query.level'(targetLevel) {
-            console.log('watch fired, targetLevel:', targetLevel);
-            console.log('list length:', this.list.length);
-            console.log('loading:', this.loading);
-            if (!targetLevel || this.loading) return;
-            this.selectFromQuery(targetLevel);
             if (!targetLevel) return;
             const idx = this.list.findIndex(
                 ([level]) => level?.path?.toLowerCase() === targetLevel.toLowerCase()
@@ -160,7 +155,6 @@ export default {
         }
     },
     async mounted() {
-        console.log('mounted, route query:', this.$route.query);
         this.list = await fetchList();
         this.editors = await fetchEditors();
 

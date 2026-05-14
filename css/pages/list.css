@@ -140,7 +140,7 @@
 }
 .page-list .level-container .level .records .user {
     width: 100%;
-    padding-block: 0.75rem;
+    padding-block: 0.25rem;
 }
 .page-list .level-container .level .records .user a {
     font-size: 1.4rem;
@@ -149,7 +149,6 @@
     text-decoration: none;
 
     display: inline-block;
-    padding: 0.2rem 0.5rem;
     border-radius: 1rem;
 
     transition: all 200ms ease;

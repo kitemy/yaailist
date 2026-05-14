@@ -33,18 +33,16 @@
 .page-leaderboard .board {
     table-layout: auto;
     display: table;
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0 0.35rem;
+    width: max-content;
 }
 .page-leaderboard .board .rank {
-    padding-block: 1rem;
+    padding-block: 0.6rem;
     padding-right: 1rem;
     text-align: end;
     white-space: nowrap;
 }
 .page-leaderboard .board .total {
-    padding: 1rem;
+    padding: 0.6rem 1rem;
     text-align: end;
     white-space: nowrap;
 }

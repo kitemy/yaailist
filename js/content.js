@@ -77,6 +77,7 @@ export async function fetchLeaderboard() {
         verified.push({
             rank: rank + 1,
             level: level.name,
+            path: level.path,
             score: score(rank + 1, 100, level.percentToQualify),
             link: level.verification,
         });
@@ -103,6 +104,7 @@ export async function fetchLeaderboard() {
                 completed.push({
                     rank: rank + 1,
                     level: level.name,
+                    path: level.path,
                     score: score(rank + 1, 100, level.percentToQualify),
                     link: record.link,
                 });
@@ -112,6 +114,7 @@ export async function fetchLeaderboard() {
             progressed.push({
                 rank: rank + 1,
                 level: level.name,
+                path: level.path,
                 percent: record.percent,
                 score: score(rank + 1, record.percent, level.percentToQualify),
                 link: record.link,

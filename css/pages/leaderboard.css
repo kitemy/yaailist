@@ -25,7 +25,7 @@
 .page-leaderboard .board-container,
 .page-leaderboard .player-container {
     grid-row: 2;
-    padding-block: 2rem;
+    padding: 2rem;
 }
 .page-leaderboard .board-container {
     padding-inline: 1rem;

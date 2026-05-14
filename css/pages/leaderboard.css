@@ -34,14 +34,19 @@
     table-layout: auto;
     display: table;
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.35rem;
 }
 .page-leaderboard .board .rank {
     padding-block: 1rem;
+    padding-right: 1rem;
     text-align: end;
+    white-space: nowrap;
 }
 .page-leaderboard .board .total {
     padding: 1rem;
     text-align: end;
+    white-space: nowrap;
 }
 .page-leaderboard .board .user {
     width: 100%;
@@ -57,6 +62,8 @@
     overflow-wrap: anywhere;
     width: 100%;
     cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 600;
 }
 .page-leaderboard .board .user button:hover {
     background-color: var(--color-primary);

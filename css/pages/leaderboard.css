@@ -31,6 +31,7 @@
     padding-inline: 1rem;
 }
 .page-leaderboard .board {
+    background-color: var(--color-background-hover);
     table-layout: auto;
     display: block;
     width: 100%;
@@ -47,7 +48,7 @@
     width: 100%;
 }
 .page-leaderboard .board .user button {
-    background-color: var(--color-background-hover);
+    background-color: var(--color-background);
     color: var(--color-on-background);
     border: none;
     border-radius: 0.5rem;

@@ -239,8 +239,8 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.75rem;
-    padding: 0.5rem 0.75rem;
-    margin-left: -0.75rem;
+    padding: 0.4rem 0.75rem 0.4rem calc(0.5rem + 1.25rem + 0.75rem);
+    margin-left: calc(-0.5rem - 1.25rem);
     text-decoration: none;
     color: var(--color-on-background);
     transition: all 200ms ease;

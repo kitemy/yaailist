@@ -59,30 +59,6 @@ export async function fetchLeaderboard() {
             return;
         }
 
-        if (!level.verifier) {
-            console.warn(`Level ${level.name} has no verifier, skipping.`);
-            return;
-        }
-
-        const verifier = Object.keys(scoreMap).find(
-            (u) => u.toLowerCase() === level.verifier.toLowerCase(),
-        ) || level.verifier;
-
-        scoreMap[verifier] ??= {
-            verified: [],
-            completed: [],
-            progressed: [],
-        };
-
-        const { verified } = scoreMap[verifier];
-        verified.push({
-            rank: rank + 1,
-            level: level.name,
-            path: level.path,
-            score: score(rank + 1, 100, level.percentToQualify),
-            link: level.verification,
-        });
-
         level.records.forEach((record) => {
             if (!record.user) {
                 console.warn(`Record in ${level.name} has no user, skipping.`);

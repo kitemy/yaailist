@@ -239,7 +239,7 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.75rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.75rem;
     text-decoration: none;
     color: var(--color-on-background);
     transition: all 200ms ease;

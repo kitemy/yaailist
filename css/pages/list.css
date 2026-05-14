@@ -8,7 +8,7 @@
 }
 .page-list .meta-container {
     padding-right: 2rem;
-    padding-left: 1.5rem;
+    padding-left: 0.5rem;
 }
 .page-list .list {
     table-layout: auto;
@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding-right: 2rem;
+    padding-right: 1rem;
 }
 .page-list .level-container .level h1 {
     font-size: 2.2rem;

@@ -225,7 +225,7 @@
 .page-list .search-bar {
     width: 100%;
     box-sizing: border-box;
-    padding: 0.5rem 0.2rem;
+    padding: 0.2rem 0.2rem;
     border-radius: 0.5rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
     background-color: var(--color-background);
@@ -237,6 +237,13 @@
 }
 .page-list .search-bar:focus {
     border-color: var(--color-primary);
-    border-radius: 0.7rem;
-    border: 5px solid rgba(128, 128, 128, 0.3);
+    border-radius: 1rem;
+}
+.page-list .search-container {
+    display: flex;
+    justify-content: center;
+}
+.page-list .search-bar {
+    width: 100%;
+    max-width: 90%;
 }

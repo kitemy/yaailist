@@ -86,3 +86,31 @@ input[type="checkbox"] {
     cursor: pointer;
     margin: 0;
 }
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    opacity: 0.85;
+    transition: opacity 100ms ease;
+}
+
+.nav__icon:hover {
+    opacity: 1;
+}
+
+.nav__icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+}

@@ -25,6 +25,14 @@
             <div class="logo">
                 <h2>The YAAI List</h2>
             </div>
+            <nav class="nav">
+                <router-link class="nav__tab" to="/">
+                    <span class="type-label-lg">List</span>
+                </router-link>
+                <router-link class="nav__tab" to="/leaderboard">
+                    <span class="type-label-lg">Leaderboard</span>
+                </router-link>
+            </nav>
             <div class="nav__actions">
                 <button class="nav__icon" @click.prevent="store.toggleDark()">
                     <img :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'" alt=""/>

@@ -24,11 +24,11 @@
 }
 .page-leaderboard .board-container,
 .page-leaderboard .player-container {
+    background-color: var(--color-background-hover);
     grid-row: 2;
     padding-block: 2rem;
 }
 .page-leaderboard .board-container {
-    background-color: var(--color-background-hover);
     padding-inline: 1rem;
 }
 .page-leaderboard .board {

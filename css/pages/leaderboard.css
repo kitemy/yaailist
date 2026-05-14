@@ -1,5 +1,6 @@
 .page-leaderboard-container {
     display: block;
+    background-color: var(--color-background-hover);
 }
 .page-leaderboard {
     height: 100%;
@@ -36,13 +37,13 @@
     width: max-content;
 }
 .page-leaderboard .board .rank {
-    padding-block: 0.6rem;
+    padding-block: 0.4rem;
     padding-right: 1rem;
     text-align: end;
     white-space: nowrap;
 }
 .page-leaderboard .board .total {
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
     text-align: end;
     white-space: nowrap;
 }
@@ -60,8 +61,9 @@
     overflow-wrap: anywhere;
     width: 100%;
     cursor: pointer;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    line-height: 1.4;
 }
 .page-leaderboard .board .user button:hover {
     background-color: var(--color-primary);

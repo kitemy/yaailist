@@ -17,9 +17,7 @@ export async function fetchList() {
                         {
                             ...level,
                             path,
-                            records: level.records.sort(
-                                (a, b) => b.percent - a.percent,
-                            ),
+                            records: level.records
                         },
                         null,
                     ];

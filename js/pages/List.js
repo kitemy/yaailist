@@ -167,9 +167,12 @@ export default {
         const targetLevel = this.$route.query.level;
         if (targetLevel) {
             const idx = this.list.findIndex(
-                ([level]) => level?.path?.toLowerCase() === targetLevel.toLowerCase()
+                ([level]) => level?.name?.toLowerCase() === targetLevel.toLowerCase()
             );
-            if (idx !== -1) this.selected = idx;
+            if (idx !== -1) {
+                this.selected = idx;
+                this.search = '';
+            }
         }
     },
     methods: {

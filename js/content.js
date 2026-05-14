@@ -1,4 +1,3 @@
-console.log('content.js loaded');
 import { score } from './score.js';
 
 const dir = '/data';

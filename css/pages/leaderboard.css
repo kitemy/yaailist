@@ -31,8 +31,9 @@
     padding-inline: 1rem;
 }
 .page-leaderboard .board {
+    padding: 1.25rem;
     table-layout: auto;
-    display: table;
+    display: block;
     width: 100%;
 }
 .page-leaderboard .board .rank {

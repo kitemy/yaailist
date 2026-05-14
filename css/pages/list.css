@@ -239,6 +239,7 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 0.75rem;
+    margin-left: -0.75rem;
     text-decoration: none;
     color: var(--color-on-background);
     transition: all 200ms ease;

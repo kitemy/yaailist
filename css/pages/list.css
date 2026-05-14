@@ -199,7 +199,7 @@
 .page-list .level-container .level .records .yt-btn a svg {
     width: 2rem;
     height: 2rem;
-    fill: white;
+    fill: var(--color-on-background);
     flex-shrink: 0;
 }
 .page-list .meta-container .og a:hover {

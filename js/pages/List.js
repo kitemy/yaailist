@@ -4,7 +4,6 @@ import { score } from "../score.js";
 import { fetchEditors, fetchList } from "../content.js";
 
 import Spinner from "../components/Spinner.js";
-import LevelAuthors from "../components/List/LevelAuthors.js";
 
 const roleIconMap = {
     owner: "crown",
@@ -15,7 +14,7 @@ const roleIconMap = {
 };
 
 export default {
-    components: { Spinner, LevelAuthors },
+    components: { Spinner },
     template: `
         <main v-if="loading">
             <Spinner></Spinner>
@@ -39,20 +38,23 @@ export default {
             <div class="level-container">
                 <div class="level" v-if="level">
                     <h1>{{ level.name }}</h1>
-                    <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
-                    <ul class="stats">
-                        <li>
-                            <div class="type-title-sm">Publisher</div>
-                            <p>{{ level.author }}</p>
-                        <li>
-                            <div class="type-title-sm">Points</div>
-                            <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
-                        </li>
-                        <li>
-                            <div class="type-title-sm">ID</div>
-                            <p>{{ level.id }}</p>
-                        </li>
-                    </ul>
+                    <div class="level-body">
+                        <iframe class="video" id="videoframe" :src="video" frameborder="0"></iframe>
+                        <ul class="stats">
+                            <li>
+                                <div class="type-title-sm">Publisher</div>
+                                <p>{{ level.author }}</p>
+                            </li>
+                            <li>
+                                <div class="type-title-sm">Points</div>
+                                <p>{{ score(selected + 1, 100, level.percentToQualify) }}</p>
+                            </li>
+                            <li>
+                                <div class="type-title-sm">ID</div>
+                                <p>{{ level.id }}</p>
+                            </li>
+                        </ul>
+                    </div>
                     <h2>Records</h2>
                     <table class="records">
                         <tr v-for="record in level.records" class="record">
@@ -90,9 +92,7 @@ export default {
                         </ol>
                     </template>
                     <h3>Overview</h3>
-                    <p>
-                        Bienvenue sur La YAAI List !
-                    </p>
+                    <p>Bienvenue sur La YAAI List !</p>
                     <p>
                         Les niveaux sont placés en fonction de la difficulté sur la AREDL
                         (a community based project ranking every rated Extreme Demon in Geometry Dash as accurately as possible).

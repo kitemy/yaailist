@@ -67,7 +67,7 @@
 }
 .page-list .level-container .level .level-body {
     display: grid;
-    grid-template-columns: 1fr minmax(9rem, 20rem);
+    grid-template-columns: 1fr minmax(3rem, 11rem);
     gap: 1.25rem;
     align-items: stretch;
 }

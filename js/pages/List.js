@@ -94,11 +94,11 @@ export default {
                         <ol class="editors">
                             <li v-for="editor in editors">
                                 <a v-if="editor.link" class="type-label-lg link" target="_blank" :href="editor.link">
-                                    <img :src="\`/assets/${roleIconMap[editor.role]}${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
+                                    <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
                                     {{ editor.name }}
                                 </a>
                                 <template v-else>
-                                    <img :src="`/assets/${roleIconMap[editor.role]}${store.dark ? '-dark' : ''}.svg`" :alt="editor.role">
+                                    <img :src="\`/assets/\${roleIconMap[editor.role]}\${store.dark ? '-dark' : ''}.svg\`" :alt="editor.role">
                                     <p>{{ editor.name }}</p>
                                 </template>
                             </li>

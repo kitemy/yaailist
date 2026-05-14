@@ -10,7 +10,10 @@ export async function fetchList() {
         return await Promise.all(
             list.map(async (path, rank) => {
                 const levelResult = await fetch(`${dir}/${encodeURIComponent(path)}.json`);
-                if (!levelResult.ok) throw new Error(`HTTP ${levelResult.status}`);
+                if (!levelResult.ok) {
+                    console.error(`Failed to load level #${rank + 1} ${path}.`);
+                    return [null, path];
+                }
                 try {
                     const level = await levelResult.json();
                     return [

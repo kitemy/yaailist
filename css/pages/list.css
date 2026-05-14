@@ -36,6 +36,22 @@
     cursor: pointer;
     width: 100%;
 }
+.page-list .list .level button:hover {
+    background-color: var(--color-background-hover);
+    color: var(--color-on-background-hover);
+}
+
+.page-list .list .level:not(.active) button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    opacity: 0.75;
+}
+
+.page-list .list .level.active button {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    opacity: 1;
+}
 .page-list .list .level.error button {
     color: var(--color-error);
     cursor: not-allowed;

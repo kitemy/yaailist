@@ -20,7 +20,7 @@ export async function fetchList() {
                         {
                             ...level,
                             path,
-                            records: level.records
+                            records: level.records,
                         },
                         null,
                     ];
@@ -89,21 +89,6 @@ export async function fetchLeaderboard() {
             completed,
             verified: [],
             progressed: [],
-        };
-    });
-
-    return [res.sort((a, b) => b.total - a.total), errs];
-}
-
-    const res = Object.entries(scoreMap).map(([user, scores]) => {
-        const { verified, completed, progressed } = scores;
-        const total = [verified, completed, progressed]
-            .flat()
-            .reduce((prev, cur) => prev + cur.score, 0);
-        return {
-            user,
-            total: Math.round(total),
-            ...scores,
         };
     });
 

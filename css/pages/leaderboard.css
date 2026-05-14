@@ -107,3 +107,36 @@
 .page-leaderboard .player .table a:hover {
     text-decoration: underline;
 }
+.page-leaderboard .player .table tr {
+    border-bottom: 1px solid rgba(128,128,128,0.15);
+}
+.page-leaderboard .player .table tr:last-child {
+    border-bottom: none;
+}
+.page-leaderboard .player .table .yt-btn {
+    text-align: end;
+    padding-block: 0.75rem;
+    white-space: nowrap;
+    width: 3rem;
+}
+.page-leaderboard .player .table .yt-btn a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: opacity 100ms ease, transform 100ms ease;
+}
+.page-leaderboard .player .table .yt-btn a:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+.page-leaderboard .player .table .yt-btn a svg {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: white;
+    flex-shrink: 0;
+}

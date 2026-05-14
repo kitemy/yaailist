@@ -128,6 +128,7 @@
 .page-list .level-container .level h2 {
     font-size: 1.5rem;
     margin: 0;
+    padding-left: 0;
 }
 .page-list .level-container .level > p {
     margin: 0;

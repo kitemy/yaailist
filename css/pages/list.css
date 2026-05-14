@@ -235,7 +235,11 @@
     height: 1.25rem;
 }
 .page-list .meta .editors li a:hover {
-    text-decoration: underline;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 .page-list .search-container {
     display: flex;

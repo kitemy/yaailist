@@ -63,7 +63,9 @@ export default {
                             <tr v-for="score in entry.verified">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <p class="type-label-lg">{{ score.level }}</p>
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
+                                        {{ score.level }}
+                                    </router-link>
                                 </td>
                                 <td class="score"><p>+{{ localize(score.score) }}</p></td>
                                 <td class="yt-btn">
@@ -84,7 +86,9 @@ export default {
                             <tr v-for="score in entry.completed">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <p class="type-label-lg">{{ score.level }}</p>
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
+                                        {{ score.level }}
+                                    </router-link>
                                 </td>
                                 <td class="score"><p>+{{ localize(score.score) }}</p></td>
                                 <td class="yt-btn">
@@ -105,7 +109,9 @@ export default {
                             <tr v-for="score in entry.progressed">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
-                                    <p class="type-label-lg">{{ score.percent }}% {{ score.level }}</p>
+                                    <router-link class="type-label-lg" :to="{ path: '/list', query: { level: score.level } }">
+                                        {{ score.percent }}% {{ score.level }}
+                                    </router-link>
                                 </td>
                                 <td class="score"><p>+{{ localize(score.score) }}</p></td>
                                 <td class="yt-btn">

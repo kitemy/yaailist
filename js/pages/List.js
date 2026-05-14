@@ -129,7 +129,7 @@ export default {
         },
         level() {
             const entry = this.list[this.selected];
-            if (!entry) return null;
+            if (!entry || !entry[0]) return null;
             return entry[0];
         },
         video() {

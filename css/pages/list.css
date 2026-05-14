@@ -149,7 +149,7 @@
     text-decoration: none;
 
     display: inline-block;
-    border-radius: 3rem;
+    border-radius: 0.25rem;
 
     transition: all 200ms ease;
 }

@@ -28,10 +28,10 @@
     padding-block: 2rem;
 }
 .page-leaderboard .board-container {
+    background-color: var(--color-background-hover);
     padding-inline: 1rem;
 }
 .page-leaderboard .board {
-    background-color: var(--color-background-hover);
     table-layout: auto;
     display: block;
     width: 100%;

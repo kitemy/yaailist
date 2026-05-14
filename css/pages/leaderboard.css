@@ -105,13 +105,23 @@
     width: 100%;
 }
 .page-leaderboard .player .table .level a {
-    display: block;
-    color: inherit;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-on-background);
     text-decoration: none;
-    cursor: pointer;
+
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+
+    transition: all 200ms ease;
 }
 .page-leaderboard .player .table a:hover {
-    text-decoration: underline;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+
+    transform: translateY(-2px);
+    opacity: 0.85;
 }
 .page-leaderboard .player .table tr {
     border-bottom: 1px solid rgba(128,128,128,0.15);

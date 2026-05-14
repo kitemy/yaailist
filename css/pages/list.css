@@ -237,7 +237,7 @@
 .page-list .meta .editors li a {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.1rem;
     border-radius: 0.75rem;
     padding: 0.4rem 0.75rem;
     text-decoration: none;

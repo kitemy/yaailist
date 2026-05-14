@@ -38,7 +38,7 @@ export async function fetchList() {
 
 export async function fetchEditors() {
     try {
-        const editorsResults = await fetch(`${dir}/_editors.json`);
+        const editorsResults = await fetch(`${dir}/AAA-editors.json`);
         const editors = await editorsResults.json();
         return editors;
     } catch {

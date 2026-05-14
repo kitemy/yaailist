@@ -141,6 +141,18 @@ export default {
             );
         },
     },
+    watch: {
+        '$route.query.level'(targetLevel) {
+            if (!targetLevel) return;
+            const idx = this.list.findIndex(
+                ([level]) => level?.path?.toLowerCase() === targetLevel.toLowerCase()
+            );
+            if (idx !== -1) {
+                this.selected = idx;
+                this.search = '';
+            }
+        }
+    },
     async mounted() {
         this.list = await fetchList();
         this.editors = await fetchEditors();
@@ -167,7 +179,7 @@ export default {
         const targetLevel = this.$route.query.level;
         if (targetLevel) {
             const idx = this.list.findIndex(
-                ([level]) => level?.name?.toLowerCase() === targetLevel.toLowerCase()
+                ([level]) => level?.path?.toLowerCase() === targetLevel.toLowerCase()
             );
             if (idx !== -1) {
                 this.selected = idx;

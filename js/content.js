@@ -60,44 +60,40 @@ export async function fetchLeaderboard() {
         }
 
         level.records.forEach((record) => {
-            if (!record.user) {
-                console.warn(`Record in ${level.name} has no user, skipping.`);
-                return;
-            }
+            if (!record.user) return;
 
             const user = Object.keys(scoreMap).find(
                 (u) => u.toLowerCase() === record.user.toLowerCase(),
             ) || record.user;
 
             scoreMap[user] ??= {
-                verified: [],
                 completed: [],
-                progressed: [],
             };
 
-            const { completed, progressed } = scoreMap[user];
-
-            if (record.percent === 100) {
-                completed.push({
-                    rank: rank + 1,
-                    level: level.name,
-                    path: level.path,
-                    score: score(rank + 1, 100, level.percentToQualify),
-                    link: record.link,
-                });
-                return;
-            }
-
-            progressed.push({
+            scoreMap[user].completed.push({
                 rank: rank + 1,
                 level: level.name,
                 path: level.path,
-                percent: record.percent,
-                score: score(rank + 1, record.percent, level.percentToQualify),
+                score: score(rank + 1, 100, 100),
                 link: record.link,
             });
         });
     });
+
+    const res = Object.entries(scoreMap).map(([user, scores]) => {
+        const { completed } = scores;
+        const total = completed.reduce((prev, cur) => prev + cur.score, 0);
+        return {
+            user,
+            total: Math.round(total),
+            completed,
+            verified: [],
+            progressed: [],
+        };
+    });
+
+    return [res.sort((a, b) => b.total - a.total), errs];
+}
 
     const res = Object.entries(scoreMap).map(([user, scores]) => {
         const { verified, completed, progressed } = scores;

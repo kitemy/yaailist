@@ -220,20 +220,20 @@
     text-decoration: underline;
 }
 .page-list .search-container {
-    padding: 0.3rem 0.5rem 1rem;
+    padding: 0.3rem 0.5rem;
 }
 .page-list .search-bar {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5rem 0.2rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: 1px solid rgba(128, 128, 128, 0.3);
     background-color: var(--color-background);
     color: var(--color-on-background);
     font-size: 1rem;
     font-family: "Lexend Deca", sans-serif;
     outline: none;
-    transition: border-color 500ms ease;
+    transition: border-color 150ms ease;
 }
 .page-list .search-bar:focus {
     border-color: var(--color-primary);

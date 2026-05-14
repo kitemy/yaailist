@@ -229,18 +229,17 @@
 .page-list .meta .editors li {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0;
 }
 .page-list .meta .editors li img {
     height: 1.25rem;
+    margin-right: 0.25rem;
 }
 .page-list .meta .editors li a {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
     border-radius: 0.75rem;
-    margin-left: -0.75rem;
-    padding: 0.4rem 0.75rem 0.4rem 0;
+    padding: 0.4rem 0.75rem;
     text-decoration: none;
     color: var(--color-on-background);
     transition: all 200ms ease;

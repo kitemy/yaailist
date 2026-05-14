@@ -52,6 +52,7 @@
     background-color: var(--color-primary);
     color: var(--color-on-primary);
     opacity: 1;
+    transform: translateY(-2px);
 }
 .page-list .level-container {
     overflow-y: auto;

@@ -1,5 +1,7 @@
 {
     "outputDirectory": ".",
+    "buildCommand": "",
+    "framework": null,
     "headers": [
         {
             "source": "/data/(.*)",

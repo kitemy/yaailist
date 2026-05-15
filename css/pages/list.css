@@ -111,12 +111,12 @@
     border-bottom: none;
 }
 .page-list .level-container .level .stats li .type-title-sm {
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     letter-spacing: 0.12em;
     opacity: 0.5;
     text-transform: uppercase;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 .page-list .level-container .level .stats li p {
     font-size: 1.2rem;

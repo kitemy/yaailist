@@ -103,7 +103,7 @@
     align-items: center;
     width: 100%;
     text-align: center;
-    padding: 0.9rem 1rem;
+    padding: 1rem 0.2rem;
     border-bottom: 1px solid rgba(128,128,128,0.15);
     list-style: none;
 }
@@ -112,7 +112,7 @@
 }
 .page-list .level-container .level .stats li .type-title-sm {
     font-size: 1.2rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     opacity: 0.5;
     text-transform: uppercase;
     font-weight: 600;

@@ -157,6 +157,6 @@
 .page-leaderboard .player .table .yt-btn a svg {
     width: 1.3rem;
     height: 1.3rem;
-    fill: white;
+    fill: var(--color-on-background);
     flex-shrink: 0;
 }

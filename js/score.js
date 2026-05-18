@@ -7,10 +7,10 @@ export function score(rank, percent, minPercent) {
     }
     if (minPercent >= 100) {
         return percent === 100
-            ? Math.max(Math.round(-25 * Math.pow(rank - 1, 0.4) + 200), 0)
+            ? Math.max(Math.round(-25 * Math.pow(rank - 1, 0.4) + 300), 0)
             : 0;
     }
-    let s = (-25 * Math.pow(rank - 1, 0.4) + 200) *
+    let s = (-25 * Math.pow(rank - 1, 0.4) + 300) *
         ((percent - (minPercent - 1)) / (100 - (minPercent - 1)));
     s = Math.max(0, s);
     if (percent != 100) {

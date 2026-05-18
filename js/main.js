@@ -5,6 +5,7 @@ export const store = Vue.reactive({
     toggleDark() {
         this.dark = !this.dark;
         localStorage.setItem('dark', JSON.stringify(this.dark));
+        document.body.classList.toggle('dark', this.dark);
     },
 });
 
@@ -17,5 +18,7 @@ const router = VueRouter.createRouter({
 });
 
 app.use(router);
+
+document.body.classList.toggle('dark', store.dark);
 
 app.mount('#app');

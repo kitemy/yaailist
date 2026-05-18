@@ -8,6 +8,7 @@
     --color-error: #de0000;
     --color-on-error: white;
 }
+body.dark,
 main.dark,
 header.dark {
     color-scheme: dark;

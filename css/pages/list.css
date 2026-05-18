@@ -61,6 +61,7 @@
 }
 .page-list .level-container {
     overflow-y: auto;
+    padding-right: 0.5rem;
 }
 .page-list .level-container .level {
     display: flex;
